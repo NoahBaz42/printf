@@ -3,22 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbaz-sil <nbaz-sil@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: noah-baz <noah-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 16:59:39 by nbaz-sil          #+#    #+#             */
-/*   Updated: 2026/05/22 17:53:28 by nbaz-sil         ###   ########.fr       */
+/*   Updated: 2026/06/06 04:57:26 by noah-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_pustr(char *s)
+int	ft_pustr(char *str)
 {
-	if(!s)
+	int i;
+	
+	if(!str)
 		write(1, "(null)", 6);
-	while(s)
+	i = 0;
+	while(str[i])
 	{
-		write(1, s, 1);
-		s++;
+		write(1, &str[i], 1);
+		i++;
 	}
+	return (i);
 }

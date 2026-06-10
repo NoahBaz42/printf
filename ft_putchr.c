@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type.c                                          :+:      :+:    :+:   */
+/*   ft_putchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbaz-sil <nbaz-sil@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: noah-baz <noah-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/22 17:02:02 by nbaz-sil          #+#    #+#             */
-/*   Updated: 2026/05/22 17:59:33 by nbaz-sil         ###   ########.fr       */
+/*   Created: 2026/05/22 16:59:07 by nbaz-sil          #+#    #+#             */
+/*   Updated: 2026/06/06 07:12:17 by noah-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_type(va_list *va, const char *format)
+int	ft_putchar(char c)
 {
-	
+	write(1, &c, 1);
+    return (1);
 }

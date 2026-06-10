@@ -2,7 +2,7 @@
 of the 42 curriculum by nbaz-sil.*
 
 # Description
-a popular and versatile C function: printf().The key to a successful ft_printf is well-structured and extensible code.
+a popular and versatile C function: printf().
 
 # Instructions
 

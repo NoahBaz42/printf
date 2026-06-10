@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nbaz-sil <nbaz-sil@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: noah-baz <noah-baz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/22 16:41:10 by nbaz-sil          #+#    #+#              #
-#    Updated: 2026/05/22 16:43:36 by nbaz-sil         ###   ########.fr        #
+#    Updated: 2026/06/08 23:05:54 by noah-baz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME =  libftprintf.a
 
 CC = cc -Wall -Wextra -Werror
 
-SRC = 
+SRC = ft_printf.c
 
 OBJ = $(SRC:.c=.o)
 
