@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noah-baz <noah-baz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbaz-sil <nbaz-sil@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 16:51:31 by nbaz-sil          #+#    #+#             */
-/*   Updated: 2026/06/08 23:09:05 by noah-baz         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:42:27 by nbaz-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,45 @@
 
 static int	ft_type(va_list *va, const char *format)
 {
-	if(format == 'c')
-		return(ft_putchr(va_arg))
+	int total;
+
+	total = 0;
+	if (*format == 'c')
+		total += ft_putchr(va_arg(*va, int));
+	else if (*format == 'X' || *format == 'x')
+		total += ft_puthex(va_arg(*va, unsigned int), *format);
+	else if (*format == 'd' || *format == 'i')
+		total += ft_putnbr(va_arg(*va, int));
+	else if (*format == 'p')
+		total += ft_putptr(va_arg(*va, void *));
+	else if (*format == 's')
+		total += ft_putstr(va_arg(*va, char *));
+	else if (*format == 'u')
+		total += ft_putuns(va_arg(*va, unsigned int));
+	else if (*format == '%')
+		total += ft_putchr('%');
+	return (total);
+		
 }
 
 int ft_printf(const char *format, ...)
 {
-	
+	va_list *va;
+	int i;
+
+	if(!format)
+		return (-1);
+	i = 0;
+	va_start(*va, format);
+	while(format)
+	{
+		if(*format == '%' && *(format + 1))
+		{
+			format++;
+			i = ft_type(va, format);
+		}
+		format++;
+	}
+	va_end(*va);
+	return (i);
 }

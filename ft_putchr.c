@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noah-baz <noah-baz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbaz-sil <nbaz-sil@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 16:59:07 by nbaz-sil          #+#    #+#             */
-/*   Updated: 2026/06/06 07:12:17 by noah-baz         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:40:44 by nbaz-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
 int	ft_putchar(char c)
 {

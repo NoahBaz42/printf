@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noah-baz <noah-baz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbaz-sil <nbaz-sil@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 17:00:29 by nbaz-sil          #+#    #+#             */
-/*   Updated: 2026/06/06 04:38:50 by noah-baz         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:38:51 by nbaz-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_putnbr(int n)
 	}
 	if (nb >= 0 && nb <= 9)
 	{
-		write(1, nb + '0', 1);
+		ft_putchr(nb + '0');
 		count++;
 	}
 	if (nb > 9)

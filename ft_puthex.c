@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noah-baz <noah-baz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbaz-sil <nbaz-sil@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 06:53:11 by noah-baz          #+#    #+#             */
-/*   Updated: 2026/06/06 07:10:13 by noah-baz         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:30:45 by nbaz-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned int num, char format)
+int	ft_puthex(unsigned long num, char format)
 {
     char        *hex;
 	int			count;
@@ -20,7 +20,7 @@ int	ft_puthex(unsigned int num, char format)
 	
 	hex = "0123456789abcdef";
 	count = 0;
-	if (format = 'X')
+	if ((format = 'X'))
 		hex = "0123456789ABCDEF";
 	if (num >= 16)
 		count += ft_puthex(num / 10, format);
